@@ -1,7 +1,7 @@
 # NSM Tools
 
 NSM Tools is a repo of standalone helper tools for use with a NSM server.
-They are forked from New-Session-Manager, which was in turn forked from Non-Session-Manager.
+They are forked from New Session Manager, which was in turn forked from Non Session Manager.
 
 The main reasons for this fork are to:
 
