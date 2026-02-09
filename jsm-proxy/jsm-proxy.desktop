@@ -1,13 +1,14 @@
 [Desktop Entry]
 Type=Application
-Name=NSM-Proxy
+Name=JSM-Proxy
 Comment=Wrapper for executables without direct NSM-Support.
-Exec=nsm-proxy
-Icon=nsm-proxy
+Exec=jsm-proxy
+Icon=jsm-proxy
 Terminal=false
 StartupNotify=false
 Version=1.0
 Categories=AudioVideo;Audio;
 X-NSM-Capable=true
-X-NSM-Exec=nsm-proxy
+X-NSM-Exec=jsm-proxy
 NoDisplay=true
+Name[en_GB]=jsm-proxy.desktop
