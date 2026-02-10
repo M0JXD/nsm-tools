@@ -1,6 +1,6 @@
 add_rules("mode.debug", "mode.release")
---add_requires('ntk_images', {system = true})
---add_requires('ntk', {system = true})
+add_requires('fltk', 'fltk_images', {system = true})
+add_requires('ntk', 'ntk_images', {system = true, optional = true})
 
 target('jacker')
 	set_kind('binary')
@@ -10,15 +10,24 @@ target('jacker')
 
 target('jsm-proxy')
     set_kind('binary')
-    add_files('src/jsm_proxy.cpp')
-    add_files('nonlib/*.C', 'nonlib/OSC/*.C')
-	add_includedirs('nonlib', 'nonlib/OSC')
-    add_syslinks('pthread', 'lo')
-    add_options('NativeOptimizations')
-    add_defines('VERSION=\'2\'')
-    add_defines('SYSTEM_PATH=\'/usr/local/share/jsm\'')
-    add_defines('DOCUMENT_PATH=\'/usr/local/share/doc\'')
-    add_defines('PIXMAP_PATH=\'/usr/local/share/pixmaps\'')
+    add_files('jsm-proxy/jsm-proxy.cpp')
+    add_files('nonlib/*.C')
+	add_includedirs('nonlib')
+	add_syslinks('lo')
+	add_options('NativeOptimizations')
+
+-- TODO: This
+target('jsm-proxy-gui')
+    set_kind('binary')
+    add_files('jsm-proxy/jsm-proxy.cpp')
+	add_options('NativeOptimizations', 'NtkBuild')
+	if has_config("NtkBuild") then
+		add_packages('ntk', 'ntk_images')
+	else
+		add_packages('fltk', 'fltk_images')
+	end
+
+
 
 -- SSE2 Optimisation Switch. TODO: Does xmake disable sse2 by default?
 option('NativeOptimizations')
@@ -26,4 +35,8 @@ option('NativeOptimizations')
     set_showmenu(true)
     add_vectorexts('sse2')
 
+option('NtkBuild')
+	set_default(false)
+	set_showmenu(true)
 
+-- TODO: Fluid rules

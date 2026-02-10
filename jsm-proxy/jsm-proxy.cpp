@@ -41,6 +41,7 @@
 #include <sys/stat.h>
 #include <sys/wait.h>
 #include <getopt.h>
+#include <string>
 
 static lo_server losrv;
 static lo_address nsm_addr;
@@ -52,6 +53,8 @@ static int signal_fd;
 
 static char *nsm_client_id;
 static char *nsm_display_name;
+
+std::string project_directory;
 
 #define CONFIG_FILE_NAME "nsm-proxy.config"
 

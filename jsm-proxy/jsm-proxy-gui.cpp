@@ -22,14 +22,14 @@
 #pragma GCC diagnostic ignored "-Wunused-parameter"
 
 
-#define _MODULE_ "nsm-proxy-gui"
+#define _MODULE_ "jsm-proxy-gui"
 
-#define APP_NAME "NSM Proxy"
-#define APP_TITLE "NSM Proxy"
+#define APP_NAME "JSM Proxy"
+#define APP_TITLE "JSM Proxy"
 
 #include <FL/Fl_File_Chooser.H>
 #include <FL/Fl_Text_Display.H>
-#include "NSM_Proxy_UI.H"
+#include "JSM_Proxy_UI.H"
 #include <lo/lo.h>
 #include <signal.h>
 #include <stdio.h>
