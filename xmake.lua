@@ -27,8 +27,6 @@ target('jsm-proxy-gui')
 		add_packages('fltk', 'fltk_images')
 	end
 
-
-
 -- SSE2 Optimisation Switch. TODO: Does xmake disable sse2 by default?
 option('NativeOptimizations')
     set_default(true)

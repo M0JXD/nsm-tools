@@ -1,5 +1,7 @@
 # NSM Tools
 
+## NOTE: THIS REPO IS JUST PROVISIONAL GROUNDWORK THAT MAY NOT BE CONTINUED DEPENDING WHETHER THE OFFICIAL NSM WOULD LIKE TO SUPPORT BSD SYSTEMS
+
 NSM Tools is a repo of standalone helper tools for use with a NSM server.
 They are forked from New Session Manager, which was in turn forked from Non Session Manager.
 
